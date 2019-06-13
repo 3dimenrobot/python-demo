@@ -35,7 +35,8 @@ host_data = {
 response = requests.post(url='http://127.0.0.1:8000/api/asset/',
               # data=host_data,  # POST 传值
               json=host_data,
-              headers={'authkey':authkey_time}
+             # http 请求头不能加_
+              headers={'authkey':"87425135893e74f1d597fef39aa30694|1558103686.5206637"}
 )
 
 print(response.text)
